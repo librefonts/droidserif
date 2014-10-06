@@ -1,0 +1,722 @@
+# Bake Begins!
+### (1 of 6) Copy sources
+$ cp -a /home/travis/build/fontdirectory/droidserif/METADATA.json /home/travis/build/fontdirectory/droidserif/builds/build
+$ cp -a /home/travis/build/fontdirectory/droidserif/DESCRIPTION.en_us.html /home/travis/build/fontdirectory/droidserif/builds/build
+$ cp -a DroidSerif.ttf.ttx DroidSerif-Italic.ttf.ttx DroidSerif-BoldItalic.ttf.ttx DroidSerif-Bold.ttf.ttx DroidSerif.ttf._p_r_e_p.ttx DroidSerif.ttf._p_o_s_t.ttx DroidSerif.ttf._n_a_m_e.ttx DroidSerif.ttf._m_a_x_p.ttx DroidSerif.ttf._l_o_c_a.ttx DroidSerif.ttf._h_m_t_x.ttx DroidSerif.ttf._h_h_e_a.ttx DroidSerif.ttf._h_e_a_d.ttx DroidSerif.ttf._g_l_y_f.ttx DroidSerif.ttf._g_a_s_p.ttx DroidSerif.ttf._f_p_g_m.ttx DroidSerif.ttf._c_v_t.ttx DroidSerif.ttf._c_m_a_p.ttx DroidSerif.ttf.O_S_2f_2.ttx DroidSerif.ttf.GlyphOrder.ttx DroidSerif.ttf.G_S_U_B_.ttx DroidSerif.ttf.G_P_O_S_.ttx DroidSerif.ttf.G_D_E_F_.ttx DroidSerif.ttf.F_F_T_M_.ttx DroidSerif-Italic.ttf._p_r_e_p.ttx DroidSerif-Italic.ttf._p_o_s_t.ttx DroidSerif-Italic.ttf._n_a_m_e.ttx DroidSerif-Italic.ttf._m_a_x_p.ttx DroidSerif-Italic.ttf._l_o_c_a.ttx DroidSerif-Italic.ttf._h_m_t_x.ttx DroidSerif-Italic.ttf._h_h_e_a.ttx DroidSerif-Italic.ttf._h_e_a_d.ttx DroidSerif-Italic.ttf._g_l_y_f.ttx DroidSerif-Italic.ttf._g_a_s_p.ttx DroidSerif-Italic.ttf._f_p_g_m.ttx DroidSerif-Italic.ttf._c_v_t.ttx DroidSerif-Italic.ttf._c_m_a_p.ttx DroidSerif-Italic.ttf.O_S_2f_2.ttx DroidSerif-Italic.ttf.GlyphOrder.ttx DroidSerif-Italic.ttf.G_S_U_B_.ttx DroidSerif-Italic.ttf.G_P_O_S_.ttx DroidSerif-Italic.ttf.G_D_E_F_.ttx DroidSerif-Italic.ttf.F_F_T_M_.ttx DroidSerif-BoldItalic.ttf._p_r_e_p.ttx DroidSerif-BoldItalic.ttf._p_o_s_t.ttx DroidSerif-BoldItalic.ttf._n_a_m_e.ttx DroidSerif-BoldItalic.ttf._m_a_x_p.ttx DroidSerif-BoldItalic.ttf._l_o_c_a.ttx DroidSerif-BoldItalic.ttf._h_m_t_x.ttx DroidSerif-BoldItalic.ttf._h_h_e_a.ttx DroidSerif-BoldItalic.ttf._h_e_a_d.ttx DroidSerif-BoldItalic.ttf._g_l_y_f.ttx DroidSerif-BoldItalic.ttf._g_a_s_p.ttx DroidSerif-BoldItalic.ttf._f_p_g_m.ttx DroidSerif-BoldItalic.ttf._c_v_t.ttx DroidSerif-BoldItalic.ttf._c_m_a_p.ttx DroidSerif-BoldItalic.ttf.O_S_2f_2.ttx DroidSerif-BoldItalic.ttf.GlyphOrder.ttx DroidSerif-BoldItalic.ttf.G_S_U_B_.ttx DroidSerif-BoldItalic.ttf.G_P_O_S_.ttx DroidSerif-BoldItalic.ttf.G_D_E_F_.ttx DroidSerif-BoldItalic.ttf.F_F_T_M_.ttx DroidSerif-Bold.ttf._p_r_e_p.ttx DroidSerif-Bold.ttf._p_o_s_t.ttx DroidSerif-Bold.ttf._n_a_m_e.ttx DroidSerif-Bold.ttf._m_a_x_p.ttx DroidSerif-Bold.ttf._l_o_c_a.ttx DroidSerif-Bold.ttf._h_m_t_x.ttx DroidSerif-Bold.ttf._h_h_e_a.ttx DroidSerif-Bold.ttf._h_e_a_d.ttx DroidSerif-Bold.ttf._g_l_y_f.ttx DroidSerif-Bold.ttf._g_a_s_p.ttx DroidSerif-Bold.ttf._f_p_g_m.ttx DroidSerif-Bold.ttf._c_v_t.ttx DroidSerif-Bold.ttf._c_m_a_p.ttx DroidSerif-Bold.ttf.O_S_2f_2.ttx DroidSerif-Bold.ttf.GlyphOrder.ttx DroidSerif-Bold.ttf.G_S_U_B_.ttx DroidSerif-Bold.ttf.G_P_O_S_.ttx DroidSerif-Bold.ttf.G_D_E_F_.ttx DroidSerif-Bold.ttf.F_F_T_M_.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources
+### (2 of 6) pyfontaine
+### (3 of 6) Run upstream tests
+$ fontbakery-check.py upstream-repo sources
+$ fontaine --collections subsets --text /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Bold.ttf.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-BoldItalic.ttf.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Italic.ttf.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif.ttf.ttx > fontaine.txt
+WARNING: Please install [PyICU](https://pypi.python.org/pypi/PyICU) toenable [feature], perhaps with: pip install pyicu
+end of pyfontaine process
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_contours(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_points(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_test_prepolation_glyph_names(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_component(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_mark_to_mark(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_own_glyphs(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_bakery_yaml_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_copyright_notices_same_across_family(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_description_html_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_fontlog_txt_exists(): FAIL
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_metadata_json_exists(): OK
+$ fontbakery-check.py upstream-ttx DroidSerif-Bold.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): FAIL
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Bold.ttf.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx DroidSerif-BoldItalic.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): FAIL
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-BoldItalic.ttf.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-BoldItalic.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx DroidSerif-Italic.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): FAIL
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Italic.ttf.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Italic.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx DroidSerif.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): FAIL
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif.ttf.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Regular.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+### (4 of 6) Convert sources to TTF
+$ ttx -d /home/travis/build/fontdirectory/droidserif/builds/build /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Regular.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Italic.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-BoldItalic.ttx /home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Bold.ttx
+Compiling "/home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Regular.ttx" to "/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Compiling "/home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Italic.ttx" to "/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Compiling "/home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-BoldItalic.ttx" to "/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Compiling "/home/travis/build/fontdirectory/droidserif/builds/build/sources/DroidSerif-Bold.ttx" to "/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+### Test DroidSerif-Regular.ttf
+$ fontbakery-check.py result DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): FAIL
+$ fontbakery-fix-ascii-fontmetadata.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): OK
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): FAIL
+$ fontbakery-fix-vertical-metrics.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ fontbakery-fix-vertical-metrics.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+Parameter              DroidSerif-Regular.ttf    DroidSerif-Bold.ttf    DroidSerif-BoldItalic.ttf    DroidSerif-Italic.ttf    
+ymax                   1907                      1907                   1907                         1907                     
+hhea.ascent            1907                      1907                   1907                         1907                     
+OS/2.sTypoAscender     1907                      1907                   1907                         1907                     
+OS/2.usWinAscent       1907                      1907                   1907                         1907                     
+ymin                   -492                      -492                   -492                         -492                     
+hhea.descent           -492                      -492                   -492                         -492                     
+OS/2.sTypoDescender    -492                      -492                   -492                         -492                     
+OS/2.usWinDescent      492                       492                    492                          492                      
+hhea.lineGap           0                         0                      0                            0                        
+OS/2.sTypoLineGap      0                         0                      0                            0                        
+hhea total             2399                      2399                   2399                         2399                     
+typo total             2399                      2399                   2399                         2399                     
+win total              2399                      2399                   2399                         2399                     
+UPM:Heights            2048:2399                 2048:2399              2048:2399                    2048:2399                
+UPM:Heights %          117 %                     117 %                  117 %                        117 %                    
+
+
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): OK
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): FAIL
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+### Optimize TTF DroidSerif-Regular.ttf
+$ ls -l 'DroidSerif-Regular.ttf'* # look at the size savings of that subset process
+DroidSerif-Regular.ttf.opt: 41940 bytes
+DroidSerif-Regular.ttf: 43676 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf.opt /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+### Autohint TTFs (ttfautohint) DroidSerif-Regular.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf '/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf: 41940 bytes
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.autohint.ttf: 42172 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.autohint.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+### Subset TTFs (pyftsubset) DroidSerif-Regular.ttf
+$ pyftsubset DroidSerif-Regular.latin
+$ pyftsubset DroidSerif-Regular.menu
+strippedname:/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Regular.ttf
+spaceWidth is    532
+nbspWidth is     532
+Nothing to do
+### Test DroidSerif-Italic.ttf
+$ fontbakery-check.py result DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): FAIL
+$ fontbakery-fix-ascii-fontmetadata.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): OK
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): OK
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): FAIL
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): FAIL
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+### Optimize TTF DroidSerif-Italic.ttf
+$ ls -l 'DroidSerif-Italic.ttf'* # look at the size savings of that subset process
+DroidSerif-Italic.ttf.opt: 38696 bytes
+DroidSerif-Italic.ttf: 40464 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf.opt /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+### Autohint TTFs (ttfautohint) DroidSerif-Italic.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf '/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf: 38696 bytes
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.autohint.ttf: 34984 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.autohint.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+### Subset TTFs (pyftsubset) DroidSerif-Italic.ttf
+$ pyftsubset DroidSerif-Italic.latin
+$ pyftsubset DroidSerif-Italic.menu
+strippedname:/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Italic.ttf
+spaceWidth is    532
+nbspWidth is     532
+Nothing to do
+### Test DroidSerif-BoldItalic.ttf
+$ fontbakery-check.py result DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): FAIL
+$ fontbakery-fix-ascii-fontmetadata.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): OK
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): OK
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): FAIL
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+### Optimize TTF DroidSerif-BoldItalic.ttf
+$ ls -l 'DroidSerif-BoldItalic.ttf'* # look at the size savings of that subset process
+DroidSerif-BoldItalic.ttf.opt: 43912 bytes
+DroidSerif-BoldItalic.ttf: 45708 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf.opt /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+### Autohint TTFs (ttfautohint) DroidSerif-BoldItalic.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf '/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf: 43912 bytes
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.autohint.ttf: 41088 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.autohint.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+### Subset TTFs (pyftsubset) DroidSerif-BoldItalic.ttf
+$ pyftsubset DroidSerif-BoldItalic.latin
+$ pyftsubset DroidSerif-BoldItalic.menu
+strippedname:/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-BoldItalic.ttf
+spaceWidth is    532
+nbspWidth is     532
+Nothing to do
+### Test DroidSerif-Bold.ttf
+$ fontbakery-check.py result DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): FAIL
+$ fontbakery-fix-ascii-fontmetadata.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): OK
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): OK
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): FAIL
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.fix /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+### Optimize TTF DroidSerif-Bold.ttf
+$ ls -l 'DroidSerif-Bold.ttf'* # look at the size savings of that subset process
+DroidSerif-Bold.ttf.opt: 47140 bytes
+DroidSerif-Bold.ttf: 48900 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf.opt /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+### Autohint TTFs (ttfautohint) DroidSerif-Bold.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf '/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf: 47140 bytes
+/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.autohint.ttf: 40044 bytes
+$ mv /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.autohint.ttf /home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+### Subset TTFs (pyftsubset) DroidSerif-Bold.ttf
+$ pyftsubset DroidSerif-Bold.latin
+$ pyftsubset DroidSerif-Bold.menu
+strippedname:/home/travis/build/fontdirectory/droidserif/builds/build/DroidSerif-Bold.ttf
+spaceWidth is    532
+nbspWidth is     532
+Nothing to do
+### (5 of 6) Generate METADATA.json (fontbakery-build-metadata.py)
+$ fontbakery-build-metadata.py /home/travis/build/fontdirectory/droidserif/builds/build
+{} exists
+No Designer Name known, using Multiple Designers for now...
+Original size: 42172\nGzip size: 22877
+Family Name: Droid Serif
+PS Name: DroidSerif-Bold
+Full Name: Droid Serif Bold
+Style: normal
+Weight: 700
+Filename: DroidSerif-Bold.ttf
+Copyright: Digitized data copyright (c) 2007, Google Corporation.
+Family Name: Droid Serif
+PS Name: DroidSerif-BoldItalic
+Full Name: Droid Serif Bold Italic
+Style: italic
+Weight: 700
+Filename: DroidSerif-BoldItalic.ttf
+Copyright: Digitized data copyright (c) 2007, Google Corporation.
+Family Name: Droid Serif
+PS Name: DroidSerif-Italic
+Full Name: Droid Serif Italic
+Style: italic
+Weight: 400
+Filename: DroidSerif-Italic.ttf
+Copyright: Digitized data copyright (c) 2007, Google Corporation.
+Family Name: Droid Serif
+PS Name: DroidSerif
+Full Name: Droid Serif
+Style: normal
+Weight: 400
+Filename: DroidSerif-Regular.ttf
+Copyright: Digitized data copyright (c) 2007, Google Corporation.
+### (6 of 6) Run tests for METADATA.json
+$ fontbakery-check.py metadata METADATA.json
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_latin(): OK
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_menu(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_more_than_500b(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_valid_html(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_daltonmaag_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontbureau_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontscom_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontshop_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontsmith_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_houseind_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_myfonts_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_veer_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_family_is_listed_in_gwf(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_atleast_latin_menu_subsets_exist(): OK
+/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_lint/tests/metadata_test.py:141: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  self.assertTrue(designer in designers,
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_designer_exists_in_profiles_csv(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_items_dicts(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_no_dupes(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_has_unique_style_weight_pairs(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_license(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_no_unknown_top_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_subsets_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_top_keys_types(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_contains_correct_rfn(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_is_consistent_across_family(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_matches_pattern(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_metadata_copyright_size(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.TestFontOnDiskFamilyEqualToMetadataJSON.test_font_on_disk_family_equal_in_metadata_json(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.TestPostScriptNameInMetadataEqualFontOnDisk.test_postscriptname_in_metadata_equal_to_font_on_disk(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_font_name_matches_family(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_family_values_are_all_the_same(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_filename_matches_postscriptname(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_font_have_regular(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fonts_fields_have_fontname(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_is_equal_to_internal_font_fullname(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_matches_postScriptName(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_400(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_normal(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_copyrighttxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_description_exists(): OK
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_fontlogtxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_licensetxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_subsets_exists.CheckSubsetsExist.test_check_subsets_exists(): FAIL
+bakery_lint.tests.downstream.test_check_monospace_agreements.CheckMonospaceAgreement.test_check_monospace_agreement(): OK
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckItalicStyleMatchesMacStyle.test_check_italic_style_matches_names(): FAIL
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckNormalStyleMatchesMacStyle.test_check_normal_style_matches_names(): ERROR
+bakery_lint.tests.downstream.test_check_metadata_matches_nametable.CheckMetadataMatchesNameTable.test_check_metadata_matches_nametable(): ERROR
+bakery_lint.tests.downstream.test_check_metadata_fields.CheckMetadataFields.test_check_metadata_fields(): OK
+bakery_lint.tests.downstream.test_check_menu_contains_proper_glyphs.CheckMenuSubsetContainsProperGlyphs.test_check_menu_contains_proper_glyphs(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_encodings_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_names_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_number_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_font_name_not_in_camelcase.CheckFontNameNotInCamelCase.test_fontname_not_in_camel_case(): OK
+bakery_lint.tests.downstream.test_check_files_menu_agreements.CheckFontsMenuAgreements.test_menu_file_agreement(): FAIL
+bakery_lint.tests.downstream.test_check_familyname_matches_fontnames.CheckFamilyNameMatchesFontNames.test_check_familyname_matches_fontnames(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckCanonicalWeights.test_check_canonical_weights(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckPostScriptNameMatchesWeight.test_postscriptname_contains_correct_weight(): FAIL
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFontWeightSameAsInMetadata.test_font_weight_same_as_in_metadata(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFullNameEqualCanonicalName.test_metadata_contains_current_font(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_styles.CheckCanonicalStyles.test_check_canonical_styles(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_filenames.CheckCanonicalFilenames.test_check_canonical_filenames(): FAIL
+{
+  "name": "Droid Serif", 
+  "designer": "Steve Matteson", 
+  "license": "Apache2", 
+  "visibility": "External", 
+  "category": "Serif", 
+  "size": 27804, 
+  "fonts": [
+    {
+      "name": "Droid Serif", 
+      "postScriptName": "DroidSerif-Bold", 
+      "fullName": "Droid Serif Bold", 
+      "style": "normal", 
+      "weight": 700, 
+      "filename": "DroidSerif-Bold.ttf", 
+      "copyright": "Digitized data copyright (c) 2007, Google Corporation."
+    }, 
+    {
+      "name": "Droid Serif", 
+      "postScriptName": "DroidSerif-BoldItalic", 
+      "fullName": "Droid Serif Bold Italic", 
+      "style": "italic", 
+      "weight": 700, 
+      "filename": "DroidSerif-BoldItalic.ttf", 
+      "copyright": "Digitized data copyright (c) 2007, Google Corporation."
+    }, 
+    {
+      "name": "Droid Serif", 
+      "postScriptName": "DroidSerif-Italic", 
+      "fullName": "Droid Serif Italic", 
+      "style": "italic", 
+      "weight": 400, 
+      "filename": "DroidSerif-Italic.ttf", 
+      "copyright": "Digitized data copyright (c) 2007, Google Corporation."
+    }, 
+    {
+      "name": "Droid Serif", 
+      "postScriptName": "DroidSerif", 
+      "fullName": "Droid Serif", 
+      "style": "normal", 
+      "weight": 400, 
+      "filename": "DroidSerif-Regular.ttf", 
+      "copyright": "Digitized data copyright (c) 2007, Google Corporation."
+    }
+  ], 
+  "subsets": [
+    "latin", 
+    "menu"
+  ], 
+  "dateAdded": "2010-05-17"
+}

@@ -1,0 +1,6 @@
+commit: HEAD
+process_files: [DroidSerif.ttf.ttx, DroidSerif-Italic.ttf.ttx, DroidSerif-BoldItalic.ttf.ttx,
+  DroidSerif-Bold.ttf.ttx]
+pyftsubset: --notdef-outline --name-IDs=* --hinting
+subset: [latin]
+ttfautohint: -l 7 -r 28 -G 50 -x 13 -w "G"
